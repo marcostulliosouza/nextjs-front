@@ -16,14 +16,19 @@ const DashboardPage = () => {
   }, [user, router]);
 
   return (
-    <div>
+    <div className="flex justify-center items-center h-screen bg-gray-100">
       {user ? (
-        <>
-          <h1>Bem-vindo, {user.col_nome}</h1>
-          <button onClick={logout}>Sair</button>
-        </>
+        <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+          <h1 className="text-2xl text-gray-800 mb-6">Bem-vindo, {user.col_nome}</h1>
+          <button
+            onClick={logout}
+            className="bg-red-500 text-white py-2 px-6 rounded-md text-lg hover:bg-red-400 transition"
+          >
+            Sair
+          </button>
+        </div>
       ) : (
-        <p>Redirecionando para login...</p>
+        <p className="text-gray-500">Redirecionando para login...</p>
       )}
     </div>
   );

@@ -3,7 +3,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-
+console.log(apiUrl)
 // Função para login
 export const login = async (col_login: string, col_senha: string) => {
   try {
